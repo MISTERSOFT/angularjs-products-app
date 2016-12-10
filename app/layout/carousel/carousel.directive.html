@@ -1,5 +1,12 @@
-<div class="carousel">
-    <a class="carousel-item" ng-repeat="slide in vm.slides" href="/{{ slide.id }}">
-        <img ng-src="{{ vm.image }}">
-    </a>
+<div class="slider">
+    <ul class="slides">
+        <li ng-repeat="slide in vm.slides">
+            <img ng-src="{{ slide.image }}">
+            <div class="caption center-align">
+                <h3>{{ slide.title }}</h3>
+                <h5 class="light white-text">{{ slide.description }}</h5>
+                <a class="waves-effect waves-light btn light-blue darken-3">VOIR PLUS</a>
+            </div>
+        </li>
+    </ul>
 </div>

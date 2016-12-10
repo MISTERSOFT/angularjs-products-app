@@ -24,25 +24,20 @@
         }
     }
 
-    CarouselController.$inject = ['jQuery'];
+    CarouselController.$inject = ['jQuery', '$scope', '$timeout', '$interval'];
     /* @ngInject */
-    function CarouselController(jQuery) {
+    function CarouselController(jQuery, $scope, $timeout, $interval) {
 
         var vm = this;
-
-        // members
-        vm.carouselOptions = {
-            time_constant: 300,
-            full_width: true,
-            indicators: true,
-            no_wrap: true // TODO : A voir
-        };
-
 
         activate();
 
         function activate() {
-            jQuery('.carousel').carousel(vm.carouselOptions);
+            $scope.$watch('vm.slides', function (value) {
+                $timeout(function () {
+                    jQuery('.slider').slider();
+                }, 300);
+            });
         }
 
     }

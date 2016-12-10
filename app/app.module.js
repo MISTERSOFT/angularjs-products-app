@@ -5,6 +5,7 @@
         'ngRoute',
         'app.core',
         'app.layout',
-        'app.home'
+        'app.home',
+        'app.products'
     ]);
 })();

@@ -43,7 +43,7 @@
 
         function activate() {
             getCurrentUrl();
-            $rootScope.$on('routeChangeSuccess', function() {
+            $rootScope.$on('$locationChangeSuccess', function() {
                 getCurrentUrl();
             });
         }
