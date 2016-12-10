@@ -25,33 +25,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Mémoire 2016 - 2017</h5>
-                    <p class="grey-text text-lighten-4">
-                        Retrouver ce projet sur <a href="https://github.com/MISTERSOFT/angularjs-products-app" class="grey-text text-lighten-4">Github</a>
-                    </p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                HAMADI Sofiane
-                <!--<a class="grey-text text-lighten-4 right" href="#!"></a>-->
-            </div>
-        </div>
-    </footer>
+    <app-footer></app-footer>
 
     <!-- JS: Dependencies -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -60,15 +34,32 @@
     <script src="node_modules/angular-route/angular-route.min.js"></script>
 
     <!-- JS: My App Files -->
+    <!-- core -->
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/constants.js"></script>
+    <script src="app/core/toast/toast.module.js"></script>
+    <script src="app/core/toast/toast.service.js"></script>
+
+    <!-- layout -->
     <script src="app/layout/navbar/navbar.module.js"></script>
     <script src="app/layout/navbar/navbar.directive.js"></script>
+
+    <script src="app/layout/footer/footer.module.js"></script>
+    <script src="app/layout/footer/footer.directive.js"></script>
+
     <script src="app/layout/loader/loader.module.js"></script>
-    <!--<script src="app/layout/loader/loader.directive.js"></script>-->
+    <script src="app/layout/loader/loader.directive.js"></script>
+
+    <script src="app/layout/carousel/carousel.module.js"></script>
+    <script src="app/layout/carousel/carousel.directive.js"></script>
+
     <script src="app/layout/layout.module.js"></script>
 
-    <script src="app/dashboard/dashboard.module.js"></script>
-    <script src="app/dashboard/dashboard.controller.js"></script>
+    <!-- Home -->
+    <script src="app/home/home.module.js"></script>
+    <script src="app/home/home.controller.js"></script>
 
+    <!-- main module -->
     <script src="app/app.module.js"></script>
     <script src="app/routes.js"></script>
 </body>

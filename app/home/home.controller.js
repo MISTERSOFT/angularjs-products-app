@@ -2,11 +2,11 @@
     'use strict';
 
     angular
-        .module('app.dashboard')
-        .controller('DashboardController', DashboardController);
+        .module('app.home')
+        .controller('HomeController', HomeController);
 
-    DashboardController.$inject = [];
-    function DashboardController() {
+    HomeController.$inject = [];
+    function HomeController() {
         var vm = this;
 
         vm.title = "dashboard";

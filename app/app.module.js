@@ -3,7 +3,8 @@
 
     angular.module('app', [
         'ngRoute',
+        'app.core',
         'app.layout',
-        'app.dashboard'
+        'app.home'
     ]);
 })();

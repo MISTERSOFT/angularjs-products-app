@@ -3,6 +3,8 @@
 
     angular.module('app.layout', [
         'app.navbar',
-        'app.loader'
+        'app.footer',
+        'app.loader',
+        'app.carousel'
     ]);
 })();
