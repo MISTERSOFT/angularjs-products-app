@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AngularJS Products App</title>
+    <meta name="description" content="AngularJS Products App">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="app/style.css">
+</head>
+
+<body ng-app="app" ng-cloak>
+
+    <!-- Navbar -->
+    <navbar></navbar>
+
+    <main>
+        <div class="container">
+            <!-- Here is where our views goes to be displayed -->
+            <ng-view></ng-view>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Mémoire 2016 - 2017</h5>
+                    <p class="grey-text text-lighten-4">
+                        Retrouver ce projet sur <a href="https://github.com/MISTERSOFT/angularjs-products-app" class="grey-text text-lighten-4">Github</a>
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                HAMADI Sofiane
+                <!--<a class="grey-text text-lighten-4 right" href="#!"></a>-->
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS: Dependencies -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+
+    <!-- JS: My App Files -->
+    <script src="app/layout/navbar/navbar.module.js"></script>
+    <script src="app/layout/navbar/navbar.directive.js"></script>
+    <script src="app/layout/loader/loader.module.js"></script>
+    <!--<script src="app/layout/navbar/navbar.directive.js"></script>-->
+    <script src="app/layout/layout.module.js"></script>
+
+    <script src="app/dashboard/dashboard.module.js"></script>
+    <script src="app/dashboard/dashboard.controller.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/routes.js"></script>
+</body>
+
+</html>

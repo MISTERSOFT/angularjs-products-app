@@ -1,0 +1,27 @@
+{
+  "name": "angularjs-products-app",
+  "version": "1.0.0",
+  "description": "Simple AngularJS Application using my WebService",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MISTERSOFT/angularjs-products-app.git"
+  },
+  "keywords": [
+    "AngularJS"
+  ],
+  "author": "HAMADI Sofiane <mistersoft31@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MISTERSOFT/angularjs-products-app/issues"
+  },
+  "homepage": "https://github.com/MISTERSOFT/angularjs-products-app#readme",
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-route": "^1.6.0",
+    "materialize-css": "^0.97.8"
+  }
+}
