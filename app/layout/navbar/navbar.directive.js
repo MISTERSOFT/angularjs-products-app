@@ -14,7 +14,7 @@
             controllerAs: 'vm',
             templateUrl: 'app/layout/navbar/navbar.directive.html',
             link: link,
-            restrict: 'A',
+            restrict: 'E',
             scope: {
             }
         };
