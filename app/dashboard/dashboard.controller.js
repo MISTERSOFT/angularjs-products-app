@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     angular
@@ -8,7 +8,7 @@
     DashboardController.$inject = [];
     function DashboardController() {
         var vm = this;
-        
+
         vm.title = "dashboard";
 
         activate();

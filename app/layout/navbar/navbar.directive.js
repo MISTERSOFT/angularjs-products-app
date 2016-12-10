@@ -34,7 +34,7 @@
         vm.currentUrl = '';
         
         // methods
-        vm.isDashboard = isDashboard;
+        vm.isHome = isHome;
         vm.isProducts = isProducts;
 
 
@@ -52,7 +52,7 @@
             vm.currentUrl = $location.url();
         }
 
-        function isDashboard() {
+        function isHome() {
             return vm.currentUrl === '/';
         }
 
