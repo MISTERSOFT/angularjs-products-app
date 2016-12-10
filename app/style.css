@@ -7,3 +7,9 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+.preloader-wrapper {
+    position: fixed;
+    top: calc(50% - (64px + 100px));
+    left: calc(50% - 64px);
+}

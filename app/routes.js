@@ -19,6 +19,11 @@
                 controllerAs: 'vm',
                 templateUrl: 'app/products/products.controller.html'
             })
+            .when('/products/:id', {
+                controller: 'ProductsController',
+                controllerAs: 'vm',
+                templateUrl: 'app/products/product.controller.html'
+            })
             .otherwise({
                 redirectTo: '/'
             });

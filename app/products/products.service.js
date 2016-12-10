@@ -9,7 +9,8 @@
     function productsService($http, toastService) {
 
         var service = {
-            getProducts: getProducts
+            getProducts: getProducts,
+            getProductById: getProductById
         };
 
         return service;
@@ -23,13 +24,19 @@
                 .catch(error);
         }
 
+        function getProductById(id) {
+            return $http
+                .get('http://localhost:3001/products/' + id)
+                .then(success)
+                .catch(error);
+        }
+
         function success(response) {
-            toastService.toast('Les produits ont bien été récupéré');
             return response.data;
         }
 
         function error(e) {
-            toastService.toast('Erreur, les products n\'ont pas été récupéré');
+            toastService.toast('Erreur lors du chargement d\'un ou plusieurs produits');
             console.log('From homeService : ', e);
         }
     }
