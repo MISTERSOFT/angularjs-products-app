@@ -19,10 +19,15 @@
                 controllerAs: 'vm',
                 templateUrl: 'app/products/products.controller.html'
             })
-            .when('/products/:id', {
-                controller: 'ProductsController',
+            .when('/products/edit/:id', {
+                controller: 'EditProductController',
                 controllerAs: 'vm',
-                templateUrl: 'app/products/product.controller.html'
+                templateUrl: 'app/products/edit/edit-product.controller.html'
+            })
+            .when('/products/add', {
+                controller: 'AddProductController',
+                controllerAs: 'vm',
+                templateUrl: 'app/products/add/add-product.controller.html'
             })
             .otherwise({
                 redirectTo: '/'

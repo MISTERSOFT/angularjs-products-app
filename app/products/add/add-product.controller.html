@@ -1,0 +1,56 @@
+<loader can-show="vm.canShowLoader"></loader>
+
+<div class="row">
+    <div class="col s12">
+        <h1>Add a new product</h1>
+    </div>
+</div>
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" type="text" ng-model="vm.newProduct.title">
+                <label for="title">Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="description" class="materialize-textarea" ng-model="vm.newProduct.description"></textarea>
+                <label for="description">Description</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s3">
+                <input id="price" type="text" ng-model="vm.newProduct.price">
+                <label for="price">Price (€)</label>
+            </div>
+            <div class="input-field col s3">
+                <input id="color" type="text" ng-model="vm.newProduct.color">
+                <label for="color">Color</label>
+            </div>
+            <div class="input-field col s3">
+                <input id="material" type="text" ng-model="vm.newProduct.material">
+                <label for="material">Material</label>
+            </div>
+            <div class="input-field col s3">
+                <input id="department" type="text" ng-model="vm.newProduct.department">
+                <label for="department">Department</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="imageUrl" type="url" class="validate" ng-model="vm.newProduct.image">
+                <label for="imageUrl" data-error="{{ vm.inputMessages.url.error }}" data-success="{{ vm.inputMessages.url.success }}">Image URL</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="thumbUrl" type="url" class="validate" ng-model="vm.newProduct.thumb">
+                <label for="thumbUrl" data-error="{{ vm.inputMessages.url.error }}" data-success="{{ vm.inputMessages.url.success }}">Thumbnail URL</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 center-align">
+                <button class="btn-large light-blue" ng-click="vm.save()">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

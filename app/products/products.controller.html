@@ -1,10 +1,21 @@
 <loader can-show="vm.canShowLoader"></loader>
 
+<div class="row">
+    <div class="col s12">
+        <h1>Our Products</h1>
+    </div>
+</div>
+
+<div class="fixed-button-bottom-right">
+    <a class="btn-floating btn-large waves-effect waves-light green" href="#!/products/add">
+        <i class="material-icons">add</i>
+    </a>
+</div>
+
 <div class="row" ng-if="!vm.canShowLoader">
     <div class="col s12">
-        <h1>Products page</h1>
         <div class="row">
-            <div class="col s6" ng-repeat="product in vm.products">
+            <div class="col s4" ng-repeat="product in vm.products">
                 <div class="card small hoverable">
                     <div class="card-image">
                         <img ng-src="{{ product.thumb }}">
@@ -14,7 +25,8 @@
                         <p>{{ product.title }}</p>
                     </div>
                     <div class="card-action center-align">
-                        <a class="btn blue" href="#!/{{ product._id }}">Voir</a>
+                        <a class="btn blue" href="#!/{{ vm.formatUrl(product._id) }}">Edit</a>
+                        <button class="btn red" ng-click="vm.deleteProduct(product._id)">Delete</button>
                     </div>
                 </div>
             </div>

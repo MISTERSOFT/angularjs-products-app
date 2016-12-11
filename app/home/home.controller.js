@@ -9,7 +9,7 @@
     function HomeController($q, homeService, toastService) {
         var vm = this;
 
-        vm.title = "dashboard";
+        vm.title = "Home";
         vm.slides = [];
         vm.getOnlyXProducts = 5; 
 

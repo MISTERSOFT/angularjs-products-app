@@ -1,0 +1,60 @@
+<loader can-show="vm.canShowLoader"></loader>
+
+<div class="row">
+    <div class="col s12">
+        <h1>{{ vm.product.title }}</h1>
+        <img ng-src="{{ vm.product.image }}" alt="{{ vm.product.title }}">
+    </div>
+    <div class="col s12">
+        <h2>Update information about the product</h2>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="title" type="text" ng-model="vm.product.title">
+                        <label for="title" ng-class="{ active : vm.product.description != '' }">Title</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="description" class="materialize-textarea" ng-model="vm.product.description"></textarea>
+                        <label for="description" ng-class="{ active : vm.product.description != '' }">Description</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s3">
+                        <input id="price" type="text" ng-model="vm.product.price">
+                        <label for="price" ng-class="{ active : vm.product.price != '' }">Price (€)</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="color" type="text" ng-model="vm.product.color">
+                        <label for="color" ng-class="{ active : vm.product.color != '' }">Color</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="material" type="text" ng-model="vm.product.material">
+                        <label for="material" ng-class="{ active : vm.product.material != '' }">Material</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="department" type="text" ng-model="vm.product.department">
+                        <label for="department" ng-class="{ active : vm.product.department != '' }">Department</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="imageUrl" type="url" class="validate" ng-model="vm.product.image">
+                        <label for="imageUrl" data-error="{{ vm.inputMessages.url.error }}" data-success="{{ vm.inputMessages.url.success }}" ng-class="{ active : vm.product.image != '' }">Image</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="thumbUrl" type="url" class="validate" ng-model="vm.product.thumb">
+                        <label for="thumbUrl" data-error="{{ vm.inputMessages.url.error }}" data-success="{{ vm.inputMessages.url.success }}" ng-class="{ active : vm.product.thumb != '' }">Thumbnail</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <button class="btn-large light-blue" ng-click="vm.updateProduct()">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
