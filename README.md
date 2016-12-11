@@ -12,9 +12,9 @@ This is a simple AngularJS application for my live coding and graduate dissertat
 - Run the application with a web server (Ex: Run a web server with python - See [Annexes](https://github.com/MISTERSOFT/angularjs-products-app#run-a-web-server-using-python))
 
 ## Annexes
-###Run a web server using Python
+### Run a web server using Python
 - [Install Python](https://www.python.org/downloads/)
-- Check that Python is in your PATH system - You can try this command line "py --version" (with Python 3, if your are using Python 2 it's "python --version") to test
+- Check if Python is in your PATH system - You can try this command line "py --version" (with Python 3, if your are using Python 2 it's "python --version") to test
 - Go to the application directory and then run :
     - With Python 3 : "py -m http.server"
     - With Python 2 : "python -m SimpleHTTPServer"
@@ -22,7 +22,7 @@ This is a simple AngularJS application for my live coding and graduate dissertat
 If you want to shutdown the Python Web Server, press "Ctrl + C" and spam it !!! (Because its bullshit :()
 
 
-###Run the NodeJS Mock WebService
+### Run the NodeJS Mock WebService
 - Open a Command Prompt and run "node server.js"
 
 If you want to shutdown the NodeJS Server, press "Ctrl + C".
