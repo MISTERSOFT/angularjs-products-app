@@ -40,7 +40,6 @@
             return productsService.getProducts().then(function (response) {
                 if (response.success) {
                     vm.products = response.result;
-                    console.log(vm.products);
                 }
                 return vm.products;
             });

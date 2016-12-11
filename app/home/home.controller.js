@@ -30,8 +30,8 @@
         function getProductsForCarousel() {
             return homeService.getProducts().then(function(response) {
                 if (response.success) {
+                    // Take only X products for the array
                     vm.slides = response.result.slice(0, vm.getOnlyXProducts);
-                    console.log(vm.slides);
                 }
                 return vm.slides;
             });

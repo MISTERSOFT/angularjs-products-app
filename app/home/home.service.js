@@ -24,12 +24,12 @@
         }
 
         function success(response) {
-            toastService.toast('Les produits ont bien été récupéré');
+            toastService.toast('Products successfully fetched !');
             return response.data;
         }
 
         function error(e) {
-            toastService.toast('Erreur, les products n\'ont pas été récupéré');
+            toastService.toast('An error has occured, not able to fetch data !');
             console.log('From homeService : ', e);
         }
     }
