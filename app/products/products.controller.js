@@ -16,23 +16,6 @@
         // members
         vm.products = []; // When we are on route: /products
         vm.canShowLoader = true;
-        vm.modal = {
-            id: 'deleteModal',
-            title: 'Confirmation',
-            content: 'Are you sure that you want to delete this product ?',
-            btnsConfig: [
-                {
-                    text: 'No',
-                    wavesColor: 'green',
-                    callback: deleteCanceled
-                },
-                {
-                    text: 'Yes',
-                    wavesColor: 'red',
-                    callback: deleteProduct
-                }
-            ]
-        };
 
         // methods
         vm.deleteProduct = deleteProduct;
@@ -79,10 +62,6 @@
                 }
                 return null;
             });
-        }
-
-        function deleteCanceled() {
-            toastService.toast('Delete canceled !');
         }
     }
 })();

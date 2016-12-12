@@ -32,9 +32,18 @@
                 if (response.success) {
                     // Take only X products for the array
                     vm.slides = response.result.slice(0, vm.getOnlyXProducts);
+
+                    // Format ID because we will us them as URL | We don't need it elsewhere
+                    for (var i = 0; i < vm.slides.length; i++) {
+                        vm.slides[i]._id = formatUrl(vm.slides[i]._id);
+                    }
                 }
                 return vm.slides;
             });
+        }
+
+        function formatUrl(productId) {
+            return productId.replace('/', '/edit/');
         }
     }
 })();

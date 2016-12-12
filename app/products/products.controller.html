@@ -26,19 +26,10 @@
                     </div>
                     <div class="card-action center-align">
                         <a class="btn blue" href="#!/{{ vm.formatUrl(product._id) }}">Edit</a>
-                        <button class="btn red"
-                            modalbox
-                            modal-id="vm.modal.id"
-                            modal-title="vm.modal.title"
-                            modal-content="vm.modal.content"
-                            modal-buttons-config="vm.modal.btnsConfig"
-                            product-id="product._id">
-                            Delete</button>
+                        <button class="btn red" ng-click="vm.deleteProduct(product._id)">Delete</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!--<modalbox modal-id="vm.modal.id" modal-title="vm.modal.title" modal-content="vm.modal.content" modal-buttons-config="vm.modal.btnsConfig"></modalbox>-->
