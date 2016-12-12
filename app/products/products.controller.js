@@ -9,7 +9,6 @@
         '$q',
         'productsService',
         'toastService'
-        // '$routeParams'
     ];
     function ProductsController($q, productsService, toastService) {
         var vm = this;
@@ -17,6 +16,23 @@
         // members
         vm.products = []; // When we are on route: /products
         vm.canShowLoader = true;
+        vm.modal = {
+            id: 'deleteModal',
+            title: 'Confirmation',
+            content: 'Are you sure that you want to delete this product ?',
+            btnsConfig: [
+                {
+                    text: 'No',
+                    wavesColor: 'green',
+                    callback: deleteCanceled
+                },
+                {
+                    text: 'Yes',
+                    wavesColor: 'red',
+                    callback: deleteProduct
+                }
+            ]
+        };
 
         // methods
         vm.deleteProduct = deleteProduct;
@@ -51,7 +67,7 @@
 
         function deleteProduct(productId) {
             vm.canShowLoader = true;
-            productsService.deleteProduct(productId).then(function(response) {
+            productsService.deleteProduct(productId).then(function (response) {
                 vm.canShowLoader = false;
                 if (response.success) {
                     toastService.toast('Product successfully deleted !');
@@ -62,7 +78,11 @@
                     }
                 }
                 return null;
-            })
+            });
+        }
+
+        function deleteCanceled() {
+            toastService.toast('Delete canceled !');
         }
     }
 })();

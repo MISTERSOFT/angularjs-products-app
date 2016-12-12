@@ -6,6 +6,7 @@
         'app.navbar',
         'app.footer',
         'app.loader',
-        'app.carousel'
+        'app.carousel',
+        'app.modal'
     ]);
 })();
